@@ -1,3 +1,5 @@
+//Copyright 2022 Crazy Mind
+
 library wikipedia;
 
 export 'src/wikipedia.dart';

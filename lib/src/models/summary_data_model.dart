@@ -1,3 +1,6 @@
+//Copyright 2022 Crazy Mind
+//This is the model for the Summary Data [WikipediaSummaryData]
+
 import 'package:wikipedia/src/utils/parse_html.dart';
 
 class WikipediaSummaryData {
@@ -10,11 +13,11 @@ class WikipediaSummaryData {
 
   WikipediaSummaryData(
       {this.pageid,
-        this.ns,
-        this.title,
-        this.extract,
-        this.description,
-        this.descriptionsource});
+      this.ns,
+      this.title,
+      this.extract,
+      this.description,
+      this.descriptionsource});
 
   WikipediaSummaryData.fromJson(Map<String, dynamic> json) {
     pageid = json['pageid'];

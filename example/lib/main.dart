@@ -27,7 +27,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   late TextEditingController _controller;
 
   bool _loading = false;
@@ -50,12 +49,11 @@ class _MyHomePageState extends State<MyHomePage> {
           decoration: InputDecoration(
               hintText: "Search...",
               suffixIcon: InkWell(
-                child: const Icon(Icons.search,color: Colors.black),
-                onTap: (){
+                child: const Icon(Icons.search, color: Colors.black),
+                onTap: () {
                   getLandingData();
                 },
-              )
-          ),
+              )),
         ),
       ),
       body: Stack(
@@ -64,35 +62,47 @@ class _MyHomePageState extends State<MyHomePage> {
             itemCount: _data.length,
             padding: const EdgeInsets.all(8),
             itemBuilder: (context, index) => InkWell(
-              onTap: ()async{
+              onTap: () async {
                 Wikipedia instance = Wikipedia();
                 setState(() {
                   _loading = true;
                 });
-                var pageData = await instance.searchSummaryWithPageId(pageId: _data[index].pageid!);
+                var pageData = await instance.searchSummaryWithPageId(
+                    pageId: _data[index].pageid!);
                 setState(() {
                   _loading = false;
                 });
-                if(pageData==null){
+                if (pageData == null) {
                   const snackBar = SnackBar(
                     content: Text('Data Not Found'),
                   );
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                }else{
+                } else {
                   showGeneralDialog(
                     context: context,
-                    pageBuilder: (context, animation, secondaryAnimation) => Scaffold(
+                    pageBuilder: (context, animation, secondaryAnimation) =>
+                        Scaffold(
                       appBar: AppBar(
-                        title: Text(_data[index].title!,style: const TextStyle(color: Colors.black)),
+                        title: Text(_data[index].title!,
+                            style: const TextStyle(color: Colors.black)),
                         backgroundColor: Colors.white,
                         iconTheme: const IconThemeData(color: Colors.black),
                       ),
                       body: ListView(
                         padding: const EdgeInsets.all(10),
                         children: [
-                          Text(pageData!.title!,style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
+                          Text(
+                            pageData!.title!,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 20),
+                          ),
                           const SizedBox(height: 8),
-                          Text(pageData.description!,style: const TextStyle(color: Colors.grey, fontStyle: FontStyle.italic),),
+                          Text(
+                            pageData.description!,
+                            style: const TextStyle(
+                                color: Colors.grey,
+                                fontStyle: FontStyle.italic),
+                          ),
                           const SizedBox(height: 8),
                           Text(pageData.extract!)
                         ],
@@ -111,7 +121,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(_data[index].title!,style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                      Text(
+                        _data[index].title!,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
+                      ),
                       const SizedBox(height: 10),
                       Text(_data[index].snippet!),
                     ],
@@ -135,23 +149,23 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Future getLandingData()async{
-    try{
-      setState((){
+  Future getLandingData() async {
+    try {
+      setState(() {
         _loading = true;
       });
       Wikipedia instance = Wikipedia();
-      var result = await instance.searchQuery(searchQuery: _controller.text,limit: 10);
-      setState((){
+      var result =
+          await instance.searchQuery(searchQuery: _controller.text, limit: 10);
+      setState(() {
         _loading = false;
         _data = result!.query!.search!;
       });
-    }catch(e){
+    } catch (e) {
       print(e);
-      setState((){
+      setState(() {
         _loading = false;
       });
     }
   }
-
 }

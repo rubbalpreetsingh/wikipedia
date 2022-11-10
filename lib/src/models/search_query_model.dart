@@ -1,3 +1,6 @@
+//Copyright 2022 Crazy Mind
+//This is the model for the Wikipedia Response Data [WikipediaResponse]
+
 import 'package:wikipedia/src/utils/parse_html.dart';
 
 class WikipediaResponse {
@@ -52,12 +55,12 @@ class WikipediaSearch {
 
   WikipediaSearch(
       {this.ns,
-        this.title,
-        this.pageid,
-        this.size,
-        this.wordcount,
-        this.snippet,
-        this.timestamp});
+      this.title,
+      this.pageid,
+      this.size,
+      this.wordcount,
+      this.snippet,
+      this.timestamp});
 
   WikipediaSearch.fromJson(Map<String, dynamic> json) {
     ns = json['ns'];
