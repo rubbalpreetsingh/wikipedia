@@ -1,10 +1,10 @@
 //Copyright 2022 Crazy Mind
-//This is the model for the Wikipedia Response Data [WikipediaResponse]
+///This is the model for the Wikipedia Response Data [WikipediaResponse]
 
 import 'package:wikipedia/src/utils/parse_html.dart';
 
 class WikipediaResponse {
-  Query? query;
+  Query? query; ///Query Result
 
   WikipediaResponse({this.query});
 
@@ -46,12 +46,12 @@ class Query {
 
 class WikipediaSearch {
   int? ns;
-  String? title;
-  int? pageid;
-  int? size;
-  int? wordcount;
-  String? snippet;
-  String? timestamp;
+  String? title; ///Title of Result
+  int? pageid; ///Page Id of Single Result
+  int? size; ///Size of Result
+  int? wordcount; ///Word Count
+  String? snippet; ///Snippet
+  String? timestamp; ///Timestamp
 
   WikipediaSearch(
       {this.ns,

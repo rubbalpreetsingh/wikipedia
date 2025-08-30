@@ -92,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: const EdgeInsets.all(10),
                         children: [
                           Text(
-                            pageData!.title!,
+                            pageData.title!,
                             style: const TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),

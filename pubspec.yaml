@@ -1,14 +1,14 @@
 name: wikipedia
-description: A new wikipedia search tool written in dart language, search anything with this tool. You can also get full page data with page id. Not Supported for web.
-version: 0.0.6
+description: A new wikipedia search tool written in dart language, search anything with this tool. You can also get full page data with page id.
+version: 0.0.9
 homepage: https://github.com/rubbalpreetsingh/wikipedia
 
 environment:
-  sdk: '>=2.12.3 <3.0.0'
-  flutter: ">=1.17.0"
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.0.0"
 
 dependencies:
-  http: ^0.13.5
+  http: ^1.1.0
   html: ^0.15.1
   flutter:
     sdk: flutter
@@ -16,13 +16,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
-# The following section is specific to Flutter packages.
-flutter:
+
 plugin:
   platforms:
     android:

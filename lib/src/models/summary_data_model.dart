@@ -1,15 +1,15 @@
 //Copyright 2022 Crazy Mind
-//This is the model for the Summary Data [WikipediaSummaryData]
+///This is the model for the Summary Data [WikipediaSummaryData]
 
 import 'package:wikipedia/src/utils/parse_html.dart';
 
 class WikipediaSummaryData {
-  int? pageid;
-  int? ns;
-  String? title;
-  String? extract;
-  String? description;
-  String? descriptionsource;
+  int? pageid; ///Page Id of Result
+  int? ns; ///NS
+  String? title; ///Title of Result
+  String? extract; ///Extract of Result
+  String? description; ///Description of Result
+  String? descriptionsource; ///Description Source of Result
 
   WikipediaSummaryData(
       {this.pageid,

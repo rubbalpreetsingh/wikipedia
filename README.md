@@ -1,6 +1,27 @@
 # Wikipedia Search Tool
 
-A new wikipedia search tool written in dart language, search anything with this tool. You can also get full page data with page id. Not Supported for web.
+A powerful Wikipedia search utility built with the Dart language.  
+This package allows you to easily query Wikipedia, fetch articles, and retrieve full page data using the page ID.
+
+---
+
+## ✨ Features
+- 🔍 Search any topic on Wikipedia
+- 📄 Retrieve complete page content with page ID
+- 📝 Get structured data such as titles, summaries, and links
+- ⚡ Lightweight and fast implementation in Dart
+- 📱 Easy integration with Flutter projects
+
+---
+
+## 🚀 Installation
+
+Add this to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  wikipedia: ^0.0.9
+```
 
 ## Example View
 ![alt text](https://firebasestorage.googleapis.com/v0/b/last-2be53.appspot.com/o/1.png?alt=media&token=e654af70-3706-4efe-baa0-10be1bb5da5f)

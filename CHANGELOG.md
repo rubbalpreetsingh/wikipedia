@@ -1,16 +1,16 @@
-## 0.0.1
+## 0.0.9
 
-Created New Search Tool For Wikipedia.
+Upgraded to the latest version
 
-## 0.0.2
+## 0.0.8
 
-New version published.
+Upgrade Dependencies
 
-## 0.0.3
+## 0.0.7
 
-New version published.
+Support for Web
 
-## 0.0.4
+## 0.0.6
 
 New version published.
 
@@ -18,6 +18,18 @@ New version published.
 
 New version published.
 
-## 0.0.6
+## 0.0.4
 
 New version published.
+
+## 0.0.3
+
+New version published.
+
+## 0.0.2
+
+New version published.
+
+## 0.0.1
+
+Created New Search Tool For Wikipedia.
