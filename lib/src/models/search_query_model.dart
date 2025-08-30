@@ -1,5 +1,7 @@
 //Copyright 2022 Crazy Mind
 ///This is the model for the Wikipedia Response Data [WikipediaResponse]
+library;
+
 
 import 'package:wikipedia/src/utils/parse_html.dart';
 

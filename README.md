@@ -20,7 +20,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  wikipedia: ^0.0.9
+  wikipedia: ^0.0.91
 ```
 
 ## Example View
@@ -36,18 +36,18 @@ dependencies:
 
 ```dart
 try{
-Wikipedia instance = Wikipedia();
-var result = await instance.searchQuery(searchQuery: "What is flutter?",limit: 1);
-for(int i=0; i<result!.query!.search!.length; i++){
-print(result.query!.search![i].snippet);
-if(!(result.query!.search![i].pageid==null)){
-var resultDescription = await instance.searchSummaryWithPageId(pageId: result.query!.search![i].pageid!);
-print(resultDescription!.title);
-print(resultDescription.description);
-}
-}
+    Wikipedia instance = Wikipedia();
+    var result = await instance.searchQuery(searchQuery: "What is flutter?",limit: 1);
+    for(int i=0; i<result!.query!.search!.length; i++){
+        print(result.query!.search![i].snippet);
+        if(!(result.query!.search![i].pageid==null)){
+            var resultDescription = await instance.searchSummaryWithPageId(pageId: result.query!.search![i].pageid!);
+            print(resultDescription!.title);
+            print(resultDescription.description);
+        }
+    }
 }catch(e){
-print(e);
+  print(e);
 }
 ```
 

@@ -1,5 +1,7 @@
 //Copyright 2022 Crazy Mind
 ///Core File for this Package
+library;
+
 
 import 'dart:convert';
 

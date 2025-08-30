@@ -1,6 +1,6 @@
 name: wikipedia
 description: A new wikipedia search tool written in dart language, search anything with this tool. You can also get full page data with page id.
-version: 0.0.9
+version: 0.0.91
 homepage: https://github.com/rubbalpreetsingh/wikipedia
 
 environment:

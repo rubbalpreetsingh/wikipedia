@@ -1,5 +1,7 @@
 //Copyright 2022 Crazy Mind
 ///HTML Parsing Code
+library;
+
 
 import 'package:html/parser.dart';
 
