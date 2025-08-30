@@ -2,7 +2,6 @@
 ///HTML Parsing Code
 library;
 
-
 import 'package:html/parser.dart';
 
 /// The parserHtml function is for parsing html into plain string.

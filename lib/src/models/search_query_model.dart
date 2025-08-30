@@ -2,11 +2,12 @@
 ///This is the model for the Wikipedia Response Data [WikipediaResponse]
 library;
 
-
 import 'package:wikipedia/src/utils/parse_html.dart';
 
 class WikipediaResponse {
-  Query? query; ///Query Result
+  Query? query;
+
+  ///Query Result
 
   WikipediaResponse({this.query});
 
@@ -48,12 +49,24 @@ class Query {
 
 class WikipediaSearch {
   int? ns;
-  String? title; ///Title of Result
-  int? pageid; ///Page Id of Single Result
-  int? size; ///Size of Result
-  int? wordcount; ///Word Count
-  String? snippet; ///Snippet
-  String? timestamp; ///Timestamp
+  String? title;
+
+  ///Title of Result
+  int? pageid;
+
+  ///Page Id of Single Result
+  int? size;
+
+  ///Size of Result
+  int? wordcount;
+
+  ///Word Count
+  String? snippet;
+
+  ///Snippet
+  String? timestamp;
+
+  ///Timestamp
 
   WikipediaSearch(
       {this.ns,

@@ -20,7 +20,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  wikipedia: ^0.0.91
+  wikipedia: ^0.0.92
 ```
 
 ## Example View

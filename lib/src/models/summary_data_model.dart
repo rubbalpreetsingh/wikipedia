@@ -2,16 +2,27 @@
 ///This is the model for the Summary Data [WikipediaSummaryData]
 library;
 
-
 import 'package:wikipedia/src/utils/parse_html.dart';
 
 class WikipediaSummaryData {
-  int? pageid; ///Page Id of Result
-  int? ns; ///NS
-  String? title; ///Title of Result
-  String? extract; ///Extract of Result
-  String? description; ///Description of Result
-  String? descriptionsource; ///Description Source of Result
+  int? pageid;
+
+  ///Page Id of Result
+  int? ns;
+
+  ///NS
+  String? title;
+
+  ///Title of Result
+  String? extract;
+
+  ///Extract of Result
+  String? description;
+
+  ///Description of Result
+  String? descriptionsource;
+
+  ///Description Source of Result
 
   WikipediaSummaryData(
       {this.pageid,

@@ -2,7 +2,6 @@
 ///Core File for this Package
 library;
 
-
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
@@ -19,9 +18,9 @@ class Wikipedia {
   Future<WikipediaResponse?> searchQuery(
       {required String searchQuery, int limit = 1}) async {
     try {
-      final _responseData = await http.get(Uri.parse(
+      final responseData = await http.get(Uri.parse(
           "$_baseUrl?action=query&format=json&list=search&srlimit=$limit&srsearch=$searchQuery&origin=*"));
-      return WikipediaResponse.fromJson(json.decode(_responseData.body));
+      return WikipediaResponse.fromJson(json.decode(responseData.body));
     } catch (e) {
       return null;
     }
@@ -32,10 +31,10 @@ class Wikipedia {
   Future<WikipediaSummaryData?> searchSummaryWithPageId(
       {required int pageId}) async {
     try {
-      final _responseData = await http.get(Uri.parse(
+      final responseData = await http.get(Uri.parse(
           "$_baseUrl?action=query&format=json&pageids=$pageId&prop=extracts|description&origin=*"));
       return WikipediaSummaryData.fromJson(
-          json.decode(_responseData.body)["query"]["pages"]["$pageId"]);
+          json.decode(responseData.body)["query"]["pages"]["$pageId"]);
     } catch (e) {
       return null;
     }
